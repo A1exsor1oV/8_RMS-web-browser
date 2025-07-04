@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>RMS-web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- полоса-ловушка -->
+  <div id="edge"></div>
+
+  <!-- выдвижное меню -->
+  <aside id="sidebar" class="sidebar">
+    <header class="hdr"><h1>RMS-web</h1></header>
+
+    <nav id="linkList" class="links"></nav>
+
+    <footer>
+      <button id="btnRefresh" class="wide"><span class="ico">🔄</span> Обновить страницу</button>
+      <button id="btnAdd"     class="wide"><span class="ico">➕</span> Добавить ссылку</button>
+      <button id="btnManage"  class="wide"><span class="ico">✏️</span> Управление ссылками</button>
+    </footer>
+  </aside>
+
+  <div id="overlay" class="overlay hidden"></div>
+  <webview id="webview" allowpopups></webview>
+
+  <!-- пароль -->
+  <dialog id="dlgPass" class="modal">
+    <form method="dialog" class="box">
+      <h2>Пароль</h2>
+      <input id="passInput" type="password" required />
+      <menu>
+        <button value="cancel">Отмена</button>
+        <button value="ok" class="primary">Ок</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
